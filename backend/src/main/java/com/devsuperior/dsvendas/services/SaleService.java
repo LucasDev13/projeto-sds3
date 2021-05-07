@@ -35,11 +35,13 @@ public class SaleService {
 
     @Transactional(readOnly = true)
     public List<SaleSumDto> amountGroupedBySeller(){
+        sellerRepository.findAll();
         return repository.amountGroupedBySeller();
     }
 
     @Transactional(readOnly = true)
     public List<SaleSuccessDto> successGroupedBySeller(){
+        sellerRepository.findAll();
         return repository.successGroupedBySeller();
     }
 }
